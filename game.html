@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Challenge - Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="game-page">
+
+    <div class="game-container">
+
+        <!-- back,hint -->
+        <div class="top-bar">
+            <button class="small-button" onclick="location.href='index.html'">
+                ← back
+            </button>
+
+            <h1>Math Challenge</h1>
+
+            <button class="small-button hint-button" onclick="showHint()">
+                💡 Hint
+            </button>
+        </div>
+
+        <!-- goal -->
+        <div class="target-box">
+            <p>goal</p>
+            <div id="target">24</div>
+        </div>
+
+        <!-- number -->
+        <div class="number-area">
+            <p>choose 2 numbers</p>
+            <div id="numbers" class="numbers"></div>
+        </div>
+
+        <!-- operator -->
+        <div class="operator-area">
+            <p>choose an operator</p>
+
+            <div class="operators">
+                <button onclick="chooseOperator('+')">+</button>
+                <button onclick="chooseOperator('-')">−</button>
+                <button onclick="chooseOperator('*')">×</button>
+                <button onclick="chooseOperator('/')">÷</button>
+            </div>
+        </div>
+
+        <!-- output area -->
+        <div class="expression-box">
+            <span id="selectedExpression">
+                choose 2 numbers
+            </span>
+        </div>
+
+        <!-- buttom -->
+        <div class="action-buttons">
+            <button onclick="undo()" class="undo-button">
+                ↩ undo
+            </button>
+
+            <button onclick="newGame()" class="new-game-button">
+                🔄 new
+            </button>
+        </div>
+
+        <!-- Hint -->
+        <div id="hintBox" class="hint-box hidden">
+            <h3>💡 solution</h3>
+            <p id="hintText"></p>
+        </div>
+
+        <!-- status -->
+        <div id="message"></div>
+
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
