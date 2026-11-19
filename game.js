@@ -21,10 +21,10 @@ function generatePuzzle() {
 
     document.getElementById("hintBox").classList.add("hidden");
 
-    let a = randomNumber(1, 12);
-    let b = randomNumber(1, 12);
-    let c = randomNumber(1, 12);
-    let d = randomNumber(1, 12);
+    let a = randomNumber(1, 20);
+    let b = randomNumber(1, 20);
+    let c = randomNumber(1, 20);
+    let d = randomNumber(1, 20);
 
     let op1 = randomOperator();
     let op2 = randomOperator();
@@ -81,7 +81,7 @@ function randomNumber(min, max) {
 
 function randomOperator() {
 
-    const operators = ["+", "-", "*", "/"];
+    const operators = ["+", "-", "*", "/","^2","Math.sqrt()"];
 
     return operators[
         Math.floor(Math.random() * operators.length)
@@ -299,7 +299,7 @@ function chooseOperator(operator) {
         if (numbers[0] === target) {
 
             showMessage(
-                "🎉 !CORRECT!",
+                "🎉 CORRECT!",
                 "success"
             );
 
