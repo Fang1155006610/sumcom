@@ -21,10 +21,10 @@ function generatePuzzle() {
 
     document.getElementById("hintBox").classList.add("hidden");
 
-    let a = randomNumber(1, 20);
-    let b = randomNumber(1, 20);
-    let c = randomNumber(1, 20);
-    let d = randomNumber(1, 20);
+    let a = randomNumber(1, 12);
+    let b = randomNumber(1, 12);
+    let c = randomNumber(1, 12);
+    let d = randomNumber(1, 12);
 
     let op1 = randomOperator();
     let op2 = randomOperator();
